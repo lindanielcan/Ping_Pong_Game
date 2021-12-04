@@ -2,6 +2,7 @@ from turtle import Turtle
 
 
 class Paddle():
+    """The class constructs and manages the ping-pong paddle."""
     def __init__(self):
         self.paddle = Turtle()
         self.paddle.color('white')
@@ -11,6 +12,9 @@ class Paddle():
         self.paddle.shapesize(4, 1, 1)
 
     def set_paddle_position(self, x, y):
+        """
+        This function sets paddle position.
+        """
         self.paddle.setx(x)
         self.paddle.sety(y)
         self.paddle.showturtle()
@@ -23,10 +27,6 @@ class Paddle():
     def move_down(self):
         if self.paddle.ycor() != -125:
             self.paddle.sety(self.paddle.ycor() - 5)
-        #print(self.paddle.ycor(), self.paddle.ycor())
-
-        # x 320 -330
-        # y 135 -125
 
     def get_paddle_y_cor(self):
         return self.paddle.ycor()
